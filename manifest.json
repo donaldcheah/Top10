@@ -1,0 +1,25 @@
+{
+  "short_name": "Top 10",
+  "name": "Top 10",
+  "icons": [
+    {
+      "src": "Top10-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "Top10-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "Top10-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

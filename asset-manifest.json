@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Top10/static/css/main.ecb95ae2.css",
+    "main.js": "/Top10/static/js/main.1a5299b4.js",
+    "service-worker.js": "/Top10/service-worker.js",
+    "index.html": "/Top10/index.html",
+    "main.ecb95ae2.css.map": "/Top10/static/css/main.ecb95ae2.css.map",
+    "main.1a5299b4.js.map": "/Top10/static/js/main.1a5299b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ecb95ae2.css",
+    "static/js/main.1a5299b4.js"
+  ]
+}
