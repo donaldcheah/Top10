@@ -43,10 +43,6 @@ const buttonStyle: CSSProperties = {
 }
 export default class CategoryView extends React.Component<Props> {
     static contextType = ThemeContext
-    constructor(p: Props) {
-        super(p)
-
-    }
 
     _renderWhenEmpty() {
         return <div id="categoryNoData" style={noDataViewStyle}>
@@ -55,7 +51,6 @@ export default class CategoryView extends React.Component<Props> {
         </div>
     }
     exportCSV = () => {
-        console.log('CategoryView : trying to export csv')
         this.props.onClickExport()
     }
     private _renderLastUpdate() {
@@ -64,11 +59,9 @@ export default class CategoryView extends React.Component<Props> {
     _renderFetchButton() {
         if (this.props.isLoading)
             return <button style={buttonStyle} onClick={this.props.onClickFetch} disabled><span className="loader" /></button>
-        // return <button key="fetchBtn" style={buttonStyle} onClick={this.props.onClickFetch}>Fetch Data</button>
         return <TimedButton onClick={this.props.onClickFetch} targetDate={this.props.nextFetchDate}>Fetch Data</TimedButton>
     }
     _renderWithData() {
-        // console.log('props:', this.props)
         return <div id="category" style={viewStyle}>
             <div id="actions" style={actionsStyle}>
                 <button style={buttonStyle} onClick={this.exportCSV}>Export CSV</button>
@@ -84,7 +77,6 @@ export default class CategoryView extends React.Component<Props> {
         return this.props.lastUpdate ? false : true
     }
     render(): React.ReactNode {
-        console.log('CategoryView render context', this.context)
         if (this.hasNoData())
             return this._renderWhenEmpty()
 

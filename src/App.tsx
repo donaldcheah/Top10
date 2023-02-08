@@ -86,6 +86,9 @@ export default class App extends React.Component<Props, State> {
     constructor(p: Props) {
         super(p)
 
+        let mode = localStorage.getItem('mode') as ThemeContextType
+        if (!mode)
+            mode = 'light'
         const obj = data.getDataFor(0)
         this.state = {
             lastUpdateDate: obj ? obj.loadDate : null,
@@ -94,7 +97,7 @@ export default class App extends React.Component<Props, State> {
             selectedCategoryIndex: 0,
             isLoading: false,
             nextFetchDate: new Date(),
-            mode: 'light'
+            mode: mode
         }
     }
 
@@ -145,10 +148,12 @@ export default class App extends React.Component<Props, State> {
     }
 
     _toggleMode = () => {
+        const targetMode = this.state.mode === 'light' ? 'dark' : 'light'
         this.setState({
             ...this.state,
-            mode: this.state.mode === 'light' ? 'dark' : 'light'
+            mode: targetMode
         })
+        localStorage.setItem('mode', targetMode)
     }
 
     _handleMode() {
