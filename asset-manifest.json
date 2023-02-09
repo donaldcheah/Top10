@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/Top10/static/css/main.ecb95ae2.css",
-    "main.js": "/Top10/static/js/main.da560384.js",
+    "main.css": "/Top10/static/css/main.cc0e6a46.css",
+    "main.js": "/Top10/static/js/main.4f87a8ce.js",
+    "static/media/coingecko_logo.png": "/Top10/static/media/coingecko_logo.2fcc1dc93a3356a564bf.png",
     "service-worker.js": "/Top10/service-worker.js",
+    "static/media/coingecko_logo_text.png": "/Top10/static/media/coingecko_logo_text.a9aaa89e27660b728184.png",
     "index.html": "/Top10/index.html",
-    "main.ecb95ae2.css.map": "/Top10/static/css/main.ecb95ae2.css.map",
-    "main.da560384.js.map": "/Top10/static/js/main.da560384.js.map"
+    "main.cc0e6a46.css.map": "/Top10/static/css/main.cc0e6a46.css.map",
+    "main.4f87a8ce.js.map": "/Top10/static/js/main.4f87a8ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecb95ae2.css",
-    "static/js/main.da560384.js"
+    "static/css/main.cc0e6a46.css",
+    "static/js/main.4f87a8ce.js"
   ]
 }
