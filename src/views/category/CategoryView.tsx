@@ -5,7 +5,8 @@ import TimedButton from '../TimedButton'
 import Top10GainersView from '../Top10GainersView'
 import Top10LosersView from '../Top10LosersView'
 
-import coingecko_logo_text from '../../imgs/coingecko_logo_text.png'
+import coingecko_logo_text_light from '../../imgs/coingecko_logo_text_light.png'
+import coingecko_logo_text_dark from '../../imgs/coingecko_logo_text_dark.png'
 import coingecko_logo from '../../imgs/coingecko_logo.png'
 
 
@@ -63,11 +64,12 @@ export default class CategoryView extends React.Component<Props> {
     static contextType = ThemeContext
 
     _renderWhenEmpty() {
+        const logoLink = this.context === 'light' ? coingecko_logo_text_light : coingecko_logo_text_dark
         return <div id="categoryNoData" style={noDataViewStyle}>
             <p>No Data</p>
             {this._renderFetchButton()}
             <div id="logoContainer" style={logoContainerStyle}>
-                <p style={logoTextStyle}>Data From  </p><a href="https://www.coingecko.com/" target='_blank'><img style={logoStyle} src={coingecko_logo_text} /></a>
+                <p style={logoTextStyle}>Data From  </p><a href="https://www.coingecko.com/" target='_blank'><img style={logoStyle} src={logoLink} /></a>
             </div>
 
         </div>

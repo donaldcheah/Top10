@@ -19,7 +19,8 @@ const NEXT_LOAD_MILLISECONDS = 6000
 
 const baseOuterFrameStyle: CSSProperties = {
     height: '100%',
-    overflowX: 'scroll'
+    overflowX: 'scroll',
+    transition: 'background-color 0.3s'
 }
 const outerFrameStyleDark: CSSProperties = {
     backgroundColor: '#333',
@@ -51,9 +52,11 @@ const baseHeadStyle: CSSProperties = {
     borderTopRightRadius: '8px'
 }
 const headStyleLight: CSSProperties = {
+    backgroundColor: '#eee',
     border: '1px solid black'
 }
 const headStyleDark: CSSProperties = {
+    backgroundColor: '#333',
     border: '1px solid white'
 }
 const headSelectStyle: CSSProperties = {
@@ -65,17 +68,20 @@ const modeButtonStyle: CSSProperties = {
 const baseContentStyle: CSSProperties = {
     width: '100%',
     minHeight: `${667 - 50}px`,
-    backgroundColor: '#ccc',
     borderBottomLeftRadius: '8px',
     borderBottomRightRadius: '8px'
 }
 const contentStyleLight: CSSProperties = {
+    color: '#000',
+    backgroundColor: '#eee',
     borderTop: 'transparent',
     borderBottom: '1px solid black',
     borderLeft: '1px solid black',
     borderRight: '1px solid black'
 }
 const contentStyleDark: CSSProperties = {
+    color: '#eee',
+    backgroundColor: '#333',
     borderTop: 'transparent',
     borderBottom: '1px solid white',
     borderLeft: '1px solid white',
