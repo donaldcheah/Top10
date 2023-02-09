@@ -5,6 +5,9 @@ import TimedButton from '../TimedButton'
 import Top10GainersView from '../Top10GainersView'
 import Top10LosersView from '../Top10LosersView'
 
+import coingecko_logo_text from '../../imgs/coingecko_logo_text.png'
+import coingecko_logo from '../../imgs/coingecko_logo.png'
+
 
 //without date, there is no data
 //with date, there is data, even if any list is empty
@@ -41,6 +44,21 @@ const actionsStyle: CSSProperties = {
 const buttonStyle: CSSProperties = {
     marginBottom: '8px'
 }
+const logoContainerStyle: CSSProperties = {
+    display: 'flex',
+    marginTop: '16px'
+}
+const logoStyle: CSSProperties = {
+    marginLeft: '16px',
+    width: '200px'
+}
+const logoTextStyle: CSSProperties = {
+    fontWeight: "bold",
+    fontFamily: 'sans-serif'
+}
+const spinnerLogoStyle: CSSProperties = {
+    width: '48px'
+}
 export default class CategoryView extends React.Component<Props> {
     static contextType = ThemeContext
 
@@ -48,6 +66,10 @@ export default class CategoryView extends React.Component<Props> {
         return <div id="categoryNoData" style={noDataViewStyle}>
             <p>No Data</p>
             {this._renderFetchButton()}
+            <div id="logoContainer" style={logoContainerStyle}>
+                <p style={logoTextStyle}>Data From  </p><a href="https://www.coingecko.com/" target='_blank'><img style={logoStyle} src={coingecko_logo_text} /></a>
+            </div>
+
         </div>
     }
     exportCSV = () => {
@@ -58,7 +80,13 @@ export default class CategoryView extends React.Component<Props> {
     }
     _renderFetchButton() {
         if (this.props.isLoading)
-            return <button style={buttonStyle} onClick={this.props.onClickFetch} disabled><span className="loader" /></button>
+            return <button
+                style={buttonStyle}
+                onClick={this.props.onClickFetch}
+                disabled>
+                {/* <span className="loader" /> */}
+                <img className='spinner_anim' style={spinnerLogoStyle} src={coingecko_logo} />
+            </button>
         return <TimedButton onClick={this.props.onClickFetch} targetDate={this.props.nextFetchDate}>Fetch Data</TimedButton>
     }
     _renderWithData() {
