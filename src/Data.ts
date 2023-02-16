@@ -123,7 +123,7 @@ class Data {
             const timeKey = `${selectedCategory}_time`
             localStorage.setItem(gainersKey, JSON.stringify(gainers))
             localStorage.setItem(losersKey, JSON.stringify(losers))
-            localStorage.setItem(timeKey, new Date().toLocaleString())
+            localStorage.setItem(timeKey, new Date().toISOString())
         })
     }
 
